@@ -17,4 +17,10 @@ public class PlayersTest {
     expected.add(new Player("Ravinder"));
     assertThat(actual, is(expected));
   }
+
+  @Test
+  public void shouldAddMove() throws Exception {
+    Players players = new Players();
+    assertThat(players.addMove(2), is(Move.create(2)));
+  }
 }

@@ -7,8 +7,10 @@ import java.util.Objects;
 
 public class Players {
   private final List<Player> list;
+  private Moves moves;
 
   public Players() {
+    this.moves = new Moves();
     this.list = new ArrayList<Player>();
   }
 
@@ -30,5 +32,9 @@ public class Players {
   public int hashCode() {
 
     return Objects.hash(list);
+  }
+
+  public Move addMove(int move) throws Exception {
+    return this.moves.addMove(move);
   }
 }

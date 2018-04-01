@@ -13,4 +13,10 @@ public class GameTest {
     players.addPlayer("Ravinder");
     assertThat(game.addPlayer("Ravinder"), is(players));
   }
+
+  @Test
+  public void shouldAddPlayerMove() throws Exception {
+    Game game = new Game();
+    assertThat(game.addMove(1), is(Move.create(1)));
+  }
 }
