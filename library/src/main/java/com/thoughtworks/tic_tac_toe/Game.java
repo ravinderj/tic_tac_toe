@@ -18,4 +18,10 @@ public class Game {
     this.players.addMove(move);
     return this.moves.addMove(move);
   }
+
+  public Moves removeMove(int position) throws Exception {
+    Move move = Move.create(position);
+    this.moves.remove(move);
+    return this.moves;
+  }
 }
